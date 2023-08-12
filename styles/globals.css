@@ -1,26 +1,35 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Source+Code+Pro&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer components {
+  * {
+    font-family: 'Inter', sans-serif;
   }
-  body {
-    color: white;
-    background: black;
+  .bg-blue-dark {
+    @apply bg-[#172A3A];
+  }
+  .text-green-dark {
+    @apply text-[#09BC8A];
+  }
+  .bg-green-dark {
+    @apply bg-[#09BC8A];
+  }
+  .border-green-dark {
+    @apply border-[#09BC8A];
+  }
+  .btn {
+    @apply px-2 py-1 rounded-lg shadow hover:shadow-lg;
+  }
+  .btn-green-dark {
+    @apply btn bg-green-dark text-white font-bold uppercase tracking-wider;
+  }
+  .bg-card-surah {
+    background: #1d374d !important;
+  }
+  .btn-navbot {
+    @apply hover:bg-green-dark;
   }
 }
